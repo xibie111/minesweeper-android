@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小岛扫雷 · 素材预览</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7f0;color:#173d2c;font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1000px;margin:40px auto;padding:0 24px}h1{font-size:30px;margin:0}p{color:#5b6f60}section{background:white;padding:24px;border-radius:24px;margin:24px 0;box-shadow:0 4px 24px #1a452408}h2{margin:0 0 18px;font-size:18px}.row{display:flex;gap:24px;flex-wrap:wrap;align-items:center}.caption{font-size:13px;color:#64796a;text-align:center;margin-top:8px}.mask{position:relative;width:108px;height:108px;overflow:hidden;background:#e4efdb;border-radius:24px}.mask.circle{border-radius:50%}.mask.square{border-radius:0}.mask.squircle{border-radius:32%}.layer{position:absolute;width:162px;height:162px;left:-27px;top:-27px}.layer img{position:absolute;width:138px;height:138px;left:12px;top:12px}.board-panel{flex:1;min-width:240px;border-radius:18px;padding:20px;background:#edf3ec}.board-panel.dark{background:#1e2c23;color:#e6efe5}.tiles{display:flex;gap:4px;align-items:center;margin:12px 0}.tile{display:flex;align-items:center;justify-content:center;border-radius:4px;background:#dce8dd;font-weight:700;color:#2166b2;flex:none}.dark .tile{background:#3d5748;color:#88c8ff}.tile img{width:86%;height:86%;object-fit:contain}.tile.mine img{width:82%;height:82%}.tile.exploded{background:#e99689}.wrong{color:#d04b44;font-size:26px}.s24 .tile{width:24px;height:24px}.s32 .tile{width:32px;height:32px}.s44 .tile{width:44px;height:44px}.illustration{display:flex;gap:28px;align-items:center}.illustration img{width:160px;height:160px;object-fit:contain}.link{color:#147d65}.note{font-size:13px}.art-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:16px}.art{background:repeating-conic-gradient(#edf0ea 0% 25%,#fff 0% 50%) 50%/16px 16px;border-radius:12px;display:flex;align-items:center;justify-content:center;min-height:160px}.art img{max-width:100%;width:144px;height:144px;object-fit:contain}
+.tile.revealed{background:#edf3ec}.dark .tile.revealed{background:#1e2c23}
+</style>
+<main>
+<h1>小岛扫雷 · 新美术素材</h1>
+<p>内置 image_gen 生成的五张透明 PNG。此页用于检查素材、尺寸和背景适配，是静态素材样张，不是模拟器或真机运行截图。</p>
+<section><h2>应用图标 · 遮罩预览</h2><div class="row">
+<div><div class="mask"><div class="layer"><img src="generated/icon_foreground_v2.png" alt="应用图标"></div></div><div class="caption">圆角</div></div>
+<div><div class="mask circle"><div class="layer"><img src="generated/icon_foreground_v2.png" alt="圆形应用图标"></div></div><div class="caption">圆形</div></div>
+<div><div class="mask squircle"><div class="layer"><img src="generated/icon_foreground_v2.png" alt="曲线应用图标"></div></div><div class="caption">曲线</div></div>
+<div><div class="mask square"><div class="layer"><img src="generated/icon_foreground_v2.png" alt="方形应用图标"></div></div><div class="caption">方形</div></div>
+</div><p class="note">按 108dp 图层、72dp 可见区域和 8dp 前景内边距比例展示；实际遮罩与动效由系统启动器决定。</p></section>
+<section><h2>棋盘标记 · 小尺寸与背景</h2><div class="row" id="boards"></div><p class="note">透明 PNG 原始 alpha 保留。错误旗帜仍使用红色叉号，引爆格仍使用珊瑚色背景。</p></section>
+<section><h2>胜负插画</h2><div class="row">
+<div class="board-panel"><div class="illustration"><img src="generated/result_victory_v2.png" alt="胜利插画"><span>岛屿已安全！</span></div></div>
+<div class="board-panel dark"><div class="illustration"><img src="generated/result_defeat_v2.png" alt="失败插画"><span>再试一局</span></div></div>
+</div></section>
+<section><h2>原始素材</h2><div class="art-grid">
+<div><a class="art" href="generated/icon_foreground_v2.png"><img src="generated/icon_foreground_v2.png" alt="应用图标原图"></a><div class="caption">应用图标</div></div>
+<div><a class="art" href="generated/board_flag_v2.png"><img src="generated/board_flag_v2.png" alt="旗帜原图"></a><div class="caption">旗帜</div></div>
+<div><a class="art" href="generated/board_mine_v2.png"><img src="generated/board_mine_v2.png" alt="地雷原图"></a><div class="caption">地雷</div></div>
+<div><a class="art" href="generated/result_victory_v2.png"><img src="generated/result_victory_v2.png" alt="胜利原图"></a><div class="caption">胜利</div></div>
+<div><a class="art" href="generated/result_defeat_v2.png"><img src="generated/result_defeat_v2.png" alt="失败原图"></a><div class="caption">失败</div></div>
+</div><p><a class="link" href="PROMPTS.md">查看完整生成提示词</a></p></section>
+</main>
+<script>
+for(const dark of [false,true]){const panel=document.createElement('div');panel.className='board-panel'+(dark?' dark':'');const heading=document.createElement('strong');heading.textContent=dark?'深色棋盘':'浅色棋盘';panel.append(heading);for(const size of [24,32,44]){const row=document.createElement('div');row.className='tiles s'+size;for(const [kind,src] of [['flag','board_flag_v2.png'],['mine revealed','board_mine_v2.png'],['exploded mine','board_mine_v2.png']]){const tile=document.createElement('div');tile.className='tile '+kind;const image=document.createElement('img');image.src='generated/'+src;image.alt=kind;tile.append(image);row.append(tile)}const number=document.createElement('div');number.className='tile revealed';number.textContent='1';row.append(number);const cross=document.createElement('div');cross.className='tile wrong';cross.textContent='×';row.append(cross);const label=document.createElement('span');label.className='caption';label.textContent=size+'px';row.append(label);panel.append(row)}document.getElementById('boards').append(panel)}
+</script>
+</html>

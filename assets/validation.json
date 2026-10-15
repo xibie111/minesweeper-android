@@ -1,0 +1,107 @@
+[
+  {
+    "file": "board_flag_v2.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha_ge_128": [
+      263,
+      71,
+      1000,
+      1187
+    ],
+    "bytes": 503404,
+    "sha256": "edb1a19a2346f09492e914548e449a8b38ada0dcf1d0b4579a5ca68c952ba404",
+    "runtime_copy_identical": true
+  },
+  {
+    "file": "board_mine_v2.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha_ge_128": [
+      61,
+      65,
+      1193,
+      1189
+    ],
+    "bytes": 1268316,
+    "sha256": "b7d27bdc64cc84e709ce493a8b5504828bdd66c0e3656a0b259e8e4e9bcef075",
+    "runtime_copy_identical": true
+  },
+  {
+    "file": "icon_foreground_v2.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha_ge_128": [
+      292,
+      274,
+      964,
+      965
+    ],
+    "bytes": 534667,
+    "sha256": "83d1c59f7ee30bf30868c7b0b8ce0f0c61d496eb9066abe71e9ad7b9c1f27622",
+    "runtime_copy_identical": true
+  },
+  {
+    "file": "result_defeat_v2.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha_ge_128": [
+      101,
+      191,
+      1162,
+      994
+    ],
+    "bytes": 837146,
+    "sha256": "bd3d2611f479a07f86f6b89733032a58d075ce699564918175e4197c7543ae25",
+    "runtime_copy_identical": true
+  },
+  {
+    "file": "result_victory_v2.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha_ge_128": [
+      139,
+      112,
+      1109,
+      1112
+    ],
+    "bytes": 989280,
+    "sha256": "dd7651e64dc1c9ca5dd0a2742fca3330c2d21a09acceca17e73b1b5b818953f7",
+    "runtime_copy_identical": true
+  }
+]
